@@ -11,7 +11,7 @@ export default function Home() {
   async function submit() {
     if (twitter && walletID) {
       setLoading(true);
-      fetch("http://localhost:3000/api/save", {
+      fetch("https://meta-build.vercel.app/api/save", {
         method: "POST",
         headers: {
           Accept: "application/json",
