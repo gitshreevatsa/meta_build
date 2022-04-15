@@ -9,7 +9,7 @@ export default function Home() {
   const [currentAccount, setCurrentAccount] = useState("");
 
   async function submit() {
-    if (twitter && walletID) {
+    if (twitter && walletID.length > 0) {
       setLoading(true);
       fetch("https://meta-build.vercel.app/api/save", {
         method: "POST",
