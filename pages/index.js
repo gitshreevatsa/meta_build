@@ -81,6 +81,7 @@ export default function Home() {
 
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]);
+      setWalletID(accounts[0]);
     } catch (error) {
       console.log(error);
     }
@@ -145,7 +146,7 @@ export default function Home() {
       </div>
       {!currentAccount && (
         <button id="submit" onClick={walletConnected}>
-          Connect Wallet
+          Connect
         </button>
       )}
       <div></div>
