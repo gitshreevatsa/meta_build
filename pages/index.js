@@ -25,7 +25,7 @@ export default function Home() {
           const data = await result.json();
           if (data.code === 200) {
             setLoading(false);
-            document.getElementById("body").innerHTML = "Thank You";
+            document.getElementById("error-throwback").innerHTML = "You are on the wailist";
           } else {
             setLoading(false);
             console.log("ERROR", data);
