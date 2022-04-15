@@ -55,7 +55,14 @@ export default function Home() {
       }
 
       const accounts = await ethereum.request({ method: "eth_accounts" });
-
+      ethereum.on("accountsChanged", (accounts) => {
+        if (accounts.length > 0) {
+          console.log(`Using account ${accounts[0]}`);
+          setWalletID(accounts[0]);
+        } else {
+          console.error("0 accounts.");
+        }
+      });
       if (accounts.length !== 0) {
         const account = accounts[0];
         console.log("Found an authorized account:", account);
