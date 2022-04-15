@@ -59,8 +59,8 @@ export default function Home() {
       if (accounts.length !== 0) {
         const account = accounts[0];
         console.log("Found an authorized account:", account);
-        setCurrentAccount(account);
         setWalletID(account);
+        setCurrentAccount(account);
       } else {
         console.log("No authorized account found");
       }
@@ -143,9 +143,11 @@ export default function Home() {
           </form>
         </div>
       </div>
-      <button id="submit" onClick={walletConnected}>
-        Connect
-      </button>
+      {!currentAccount && (
+        <button id="submit" onClick={walletConnected}>
+          Connect Wallet
+        </button>
+      )}
       <div></div>
       <br />
       <button className="button-style" onClick={submit}>
