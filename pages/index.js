@@ -96,13 +96,13 @@ export default function Home() {
         <title>META BUILD</title>
       </Head>
       <div className="images">
-        <Image
+        {/* <Image
           className="img1"
           src="/logo.png"
           alt="METABUILD LOGO"
-          // width={200}
-          // height={100}
-        />
+          width={200}
+          height={100}
+        /> */}
       </div>
       <div className="intro">
         <h4>
