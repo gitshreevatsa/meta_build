@@ -6,12 +6,14 @@
 }
 
 .body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  color: #444;
-  background: #fff;
+  font-family: "Raleway", serif;
+  color: #061551;
+  background: #f2f7ff;
   align-items: center;
   display: block;
   overflow: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .twitter-title {
@@ -25,6 +27,7 @@
   width: auto;
   height: auto;
   padding: 1em;
+  color: #444;
 }
 .wallet-title {
   display: grid;
@@ -35,29 +38,41 @@
   width: auto;
   height: auto;
   padding: 1em;
+  color: #444;
+
 }
 .wallet-input {
   position: relative;
   left: 40px;
   width: calc(100% - 80px);
-  border: solid rgb(255, 255, 255) 1px;
   padding: 6px;
   text-align: center;
   box-sizing: border-box;
   border-radius: 10px;
+  font-family: "Raleway";
+  line-height: 1;
+  color:#000000, #5933AA;
 }
 .twitter-input {
   position: relative;
   left: 40px;
   width: calc(100% - 80px);
-  border: solid rgb(255, 255, 255) 1px;
   padding: 6px;
   text-align: center;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 8px;
+  font-family: "Raleway";
+  font-size: 20px;
+}
+
+.wallet-input,
+.twitter-input,
+input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 1;
 }
 .form-group {
-  display: flex;
+  display: block;
   justify-content: space-evenly;
   font-family: "Segoe UI", Arial, sans-serif;
   color: #444;
@@ -68,17 +83,16 @@
   flex: 2.5;
   border: solid rgb(151, 145, 145) 1px;
   background: #5bcadd;
-  color: #000000;
   cursor: pointer;
   font-weight: 60;
   width: auto;
   position: relative;
   border-radius: 10px;
+  color: #444;
 }
 
 .button-style {
   background: none;
-  color: inherit;
   border: 1px solid rgb(143, 141, 141);
   border-radius: 10px;
   padding: 4px 4px;
@@ -90,13 +104,15 @@
   align-self: center;
   margin: auto;
   vertical-align: top;
+  color: #444;
+
 }
 
 #submit {
   background: none;
-  color: inherit;
+  color: #444;
   border: 0.5px solid rgb(143, 141, 141);
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 4px 4px;
   font: inherit;
   cursor: pointer;
@@ -107,7 +123,6 @@
   margin: auto;
   justify-content: space-between;
   vertical-align: top;
-  /* box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.19); */
 }
 
 .button-style:hover {
@@ -118,19 +133,18 @@
   text-align: center;
   position: relative;
 }
+
 .intro {
-  display: flex;
+  display: grid;
   width: auto;
   padding: 20px;
   background: rgb(255, 255, 255);
   margin: 0 auto;
   border-radius: 2px;
-  /* -webkit-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); */
   position: inherit;
   z-index: 0;
-  /* -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); */
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   left: 10%;
   right: 10%;
   top: 20%;
@@ -140,11 +154,17 @@
   margin-bottom: -7em;
   justify-content: center;
   margin-top: 5em;
+  text-align: center;
+  font-size: 55, 40, 35;
 }
-
 
 .images {
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin: 0 auto;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../public/Raleway/Raleway-VariableFont_wght.ttf");
 }

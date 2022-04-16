@@ -25,7 +25,8 @@ export default function Home() {
           const data = await result.json();
           if (data.code === 200) {
             setLoading(false);
-            document.getElementById("error-throwback").innerHTML = "You are on the wailist";
+            document.getElementById("error-throwback").innerHTML =
+              "You are on the wailist";
           } else {
             setLoading(false);
             console.log("ERROR", data);
@@ -104,25 +105,24 @@ export default function Home() {
         <title>META BUILD</title>
       </Head>
       <div className="images">
-        {/* <Image
+        <Image
           className="img1"
-          src="/logo.png"
+          src="/beta.png"
           alt="METABUILD LOGO"
-          width={200}
-          height={100}
-        /> */}
+          width={170}
+          height={150}
+        />
       </div>
       <div className="intro">
+        <h2>
+          MetaBuild is building the premier Shopping Verse with 3D movie
+          theatres, magic portals, gaming and dynamic maps!
+        </h2>
+        <br />
+        <br />
         <h4>
-          Welcome to Meta Build! Lorem Ipsum is simply dummy text of the
-          printing and typesetting industry. Lorem Ipsum has been the industrys
-          standard dummy text ever since the 1500s, when an unknown printer took
-          a galley of type and scrambled it to make a type specimen book. It has
-          survived not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum
+          Sign-up for the early access list and be eligible for airdrops and
+          private sale of Builder Tokens - the currency of the Shopping Verse.
         </h4>
       </div>
       <h3 className="twitter-title">Twitter ID</h3>
@@ -153,7 +153,7 @@ export default function Home() {
       </div>
       {!currentAccount && (
         <button id="submit" onClick={walletConnected}>
-          Connect
+          Connect Wallet
         </button>
       )}
       <div></div>
@@ -163,6 +163,17 @@ export default function Home() {
       </button>
       <br />
       <h3 id="error-throwback"></h3>
+      <br />
+      <br />
+      <br />
+      <br />
+      {/* <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br /> */}
+      <div></div>
     </div>
   );
 }
